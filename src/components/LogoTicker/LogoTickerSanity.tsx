@@ -17,11 +17,11 @@ import {
   Shopify,
   Skims,
   Sonos,
-} from "@/assets/logo-scroller";
+} from "@/assets/logo-ticker";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const LogoScroll = () => {
+const LogoTickerSanity = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -92,4 +92,4 @@ const LogoScroll = () => {
   );
 };
 
-export default LogoScroll;
+export default LogoTickerSanity;

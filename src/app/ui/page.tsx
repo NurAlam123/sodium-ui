@@ -6,11 +6,11 @@ export default function Page() {
   return (
     <section className="h-dvh flex justify-center items-center">
       <div>
-        <Button>
-          <Link href="/ui/logo-scroller" className="flex items-center gap-4">
-            Logo Scroller <ArrowUpRight />
-          </Link>
-        </Button>
+        <Link href="/ui/logo-ticker">
+          <Button>
+            Logo Ticker <ArrowUpRight />
+          </Button>
+        </Link>
       </div>
     </section>
   );

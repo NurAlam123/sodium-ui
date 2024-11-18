@@ -11,11 +11,11 @@ export default function Home() {
           A collection of random UI
         </p>
       </div>
-      <Button>
-        <Link href="/ui" className="flex items-center gap-4">
+      <Link href="/ui">
+        <Button>
           Explore <ArrowUpRight />
-        </Link>
-      </Button>
+        </Button>
+      </Link>
     </main>
   );
 }

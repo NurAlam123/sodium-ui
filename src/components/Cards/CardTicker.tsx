@@ -40,10 +40,10 @@ const CardTicker = () => {
   return (
     <>
       <Title title="Image_Card_Ticker" />
-      <section className="my-20 mx-10 overflow-hidden h-dvh [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)]">
+      <section className="my-20 mx-4 md:mx-10 overflow-hidden h-dvh [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)]">
         <div className="flex justify-center items-center">
           <motion.div
-            className="flex flex-col gap-4 pr-4"
+            className="flex flex-col gap-2 md:gap-4 pr-2 md:pr-4"
             style={{
               translateY: "0%",
             }}
@@ -78,7 +78,7 @@ const CardTicker = () => {
               ease: "linear",
               repeat: Infinity,
             }}
-            className="flex flex-col gap-4 pr-4"
+            className="flex flex-col gap-2 md:gap-4 pr-2 md:pr-4"
           >
             {[...photos.column2, ...photos.column2].map((photo, index) => (
               <Card
@@ -98,7 +98,7 @@ const CardTicker = () => {
 
 const Card = ({ photo }: { photo: ImageProps }) => {
   return (
-    <div className="w-[300px] h-[300px] bg-white border-2 rounded-xl overflow-hidden">
+    <div className="w-[150px] h-[150px] md:w-[300px] md:h-[300px] bg-white border-2 rounded-xl overflow-hidden">
       <Image
         src={photo.src}
         alt="Card Image"

@@ -17,6 +17,7 @@ import {
 import Image from "next/image";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Title from "../ui/Title";
 
 const projects = {
   column1: [project1, project2, project3, project4, project5, project11],
@@ -49,82 +50,85 @@ const ProjectGrid = () => {
   });
 
   return (
-    <section
-      ref={containerRef}
-      className="flex items-center justify-center lg:p-16 overflow-hidden"
-    >
-      <motion.div
-        style={{
-          skewX: smoothSkewX,
-        }}
-        className="grid grid-cols-4 gap-4 px-8 py-32 justify-center items-center will-change-transform"
+    <>
+      <Title title="Project_Grid" />
+      <section
+        ref={containerRef}
+        className="flex items-center justify-center lg:p-16 overflow-hidden"
       >
         <motion.div
-          className="*:w-40 *:h-40 md:*:w-80 md:*:h-80 *:object-cover *:rounded-xl space-y-4 hover:*:scale-105 hover:*:shadow-black/20 hover:*:shadow-lg hover:*:-translate-y-[10px] *:cursor-pointer *:transition transition will-change-transform"
           style={{
-            translateY: smoothYDown,
+            skewX: smoothSkewX,
           }}
+          className="grid grid-cols-4 gap-4 px-8 py-32 justify-center items-center will-change-transform"
         >
-          {projects.column1.map((project, index) => (
-            <Image
-              key={index}
-              src={project.src}
-              width={project.width}
-              height={project.height}
-              alt={`Column 1, Project ${index}`}
-            />
-          ))}
+          <motion.div
+            className="*:w-40 *:h-40 md:*:w-80 md:*:h-80 *:object-cover *:rounded-xl space-y-4 hover:*:scale-105 hover:*:shadow-black/20 hover:*:shadow-lg hover:*:-translate-y-[10px] *:cursor-pointer *:transition transition will-change-transform"
+            style={{
+              translateY: smoothYDown,
+            }}
+          >
+            {projects.column1.map((project, index) => (
+              <Image
+                key={index}
+                src={project.src}
+                width={project.width}
+                height={project.height}
+                alt={`Column 1, Project ${index}`}
+              />
+            ))}
+          </motion.div>
+          <motion.div
+            className="*:w-40 *:h-40 md:*:w-80 md:*:h-80 *:object-cover *:rounded-xl space-y-4 -translate-y-16 hover:*:scale-105 hover:*:shadow-black/20 hover:*:shadow-lg hover:*:-translate-y-[10px] *:cursor-pointer *:transition transition will-change-transform"
+            style={{
+              translateY: smoothYUp,
+            }}
+          >
+            {projects.column2.map((project, index) => (
+              <Image
+                key={index}
+                src={project.src}
+                width={project.width}
+                height={project.height}
+                alt={`Column 2, Project ${index}`}
+              />
+            ))}
+          </motion.div>
+          <motion.div
+            className="*:w-40 *:h-40 md:*:w-80 md:*:h-80 *:object-cover *:rounded-xl space-y-4 translate-y-16 hover:*:scale-105 hover:*:shadow-black/20 hover:*:shadow-lg hover:*:-translate-y-[10px] *:cursor-pointer *:transition transition will-change-transform"
+            style={{
+              translateY: smoothYDown,
+            }}
+          >
+            {projects.column3.map((project, index) => (
+              <Image
+                key={index}
+                src={project.src}
+                width={project.width}
+                height={project.height}
+                alt={`Column 3, Project ${index}`}
+              />
+            ))}
+          </motion.div>
+          <motion.div
+            className="*:w-40 *:h-40 md:*:w-80 md:*:h-80 *:object-cover *:rounded-xl space-y-4 -translate-y-16 hover:*:scale-105 hover:*:shadow-black/20 hover:*:shadow-lg hover:*:-translate-y-[10px] *:cursor-pointer *:transition transition will-change-transform"
+            style={{
+              translateY: smoothYUp,
+            }}
+          >
+            {projects.column4.map((project, index) => (
+              <Image
+                key={index}
+                src={project.src}
+                width={project.width}
+                height={project.height}
+                alt={`Column 4, Project ${index}`}
+              />
+            ))}
+          </motion.div>
         </motion.div>
-        <motion.div
-          className="*:w-40 *:h-40 md:*:w-80 md:*:h-80 *:object-cover *:rounded-xl space-y-4 -translate-y-16 hover:*:scale-105 hover:*:shadow-black/20 hover:*:shadow-lg hover:*:-translate-y-[10px] *:cursor-pointer *:transition transition will-change-transform"
-          style={{
-            translateY: smoothYUp,
-          }}
-        >
-          {projects.column2.map((project, index) => (
-            <Image
-              key={index}
-              src={project.src}
-              width={project.width}
-              height={project.height}
-              alt={`Column 2, Project ${index}`}
-            />
-          ))}
-        </motion.div>
-        <motion.div
-          className="*:w-40 *:h-40 md:*:w-80 md:*:h-80 *:object-cover *:rounded-xl space-y-4 translate-y-16 hover:*:scale-105 hover:*:shadow-black/20 hover:*:shadow-lg hover:*:-translate-y-[10px] *:cursor-pointer *:transition transition will-change-transform"
-          style={{
-            translateY: smoothYDown,
-          }}
-        >
-          {projects.column3.map((project, index) => (
-            <Image
-              key={index}
-              src={project.src}
-              width={project.width}
-              height={project.height}
-              alt={`Column 3, Project ${index}`}
-            />
-          ))}
-        </motion.div>
-        <motion.div
-          className="*:w-40 *:h-40 md:*:w-80 md:*:h-80 *:object-cover *:rounded-xl space-y-4 -translate-y-16 hover:*:scale-105 hover:*:shadow-black/20 hover:*:shadow-lg hover:*:-translate-y-[10px] *:cursor-pointer *:transition transition will-change-transform"
-          style={{
-            translateY: smoothYUp,
-          }}
-        >
-          {projects.column4.map((project, index) => (
-            <Image
-              key={index}
-              src={project.src}
-              width={project.width}
-              height={project.height}
-              alt={`Column 4, Project ${index}`}
-            />
-          ))}
-        </motion.div>
-      </motion.div>
-    </section>
+      </section>
+    </>
   );
 };
 

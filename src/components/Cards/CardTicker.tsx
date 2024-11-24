@@ -13,6 +13,7 @@ import {
 import Image, { ImageProps } from "next/image";
 
 import { motion } from "framer-motion";
+import Title from "../ui/Title";
 
 const photos = {
   column1: [
@@ -37,58 +38,61 @@ const CardTicker = () => {
   const DURATION = 20;
 
   return (
-    <section className="my-20 mx-10 overflow-hidden h-dvh [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)]">
-      <div className="flex justify-center items-center">
-        <motion.div
-          className="flex flex-col gap-4 pr-4"
-          style={{
-            translateY: "0%",
-          }}
-          animate={{
-            translateY: "-50%",
-          }}
-          transition={{
-            duration: DURATION,
-            ease: "linear",
-            repeat: Infinity,
-          }}
-        >
-          {[...photos.column1, ...photos.column1].map((photo, index) => (
-            <Card
-              key={index}
-              photo={{
-                alt: `Card Image ${index}`,
-                ...photo,
-              }}
-            />
-          ))}
-        </motion.div>
-        <motion.div
-          style={{
-            translateY: "-50%",
-          }}
-          animate={{
-            translateY: "0%",
-          }}
-          transition={{
-            duration: DURATION,
-            ease: "linear",
-            repeat: Infinity,
-          }}
-          className="flex flex-col gap-4 pr-4"
-        >
-          {[...photos.column2, ...photos.column2].map((photo, index) => (
-            <Card
-              key={index}
-              photo={{
-                alt: `Card Image ${index}`,
-                ...photo,
-              }}
-            />
-          ))}
-        </motion.div>
-      </div>
-    </section>
+    <>
+      <Title title="Image_Card_Ticker" />
+      <section className="my-20 mx-10 overflow-hidden h-dvh [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)]">
+        <div className="flex justify-center items-center">
+          <motion.div
+            className="flex flex-col gap-4 pr-4"
+            style={{
+              translateY: "0%",
+            }}
+            animate={{
+              translateY: "-50%",
+            }}
+            transition={{
+              duration: DURATION,
+              ease: "linear",
+              repeat: Infinity,
+            }}
+          >
+            {[...photos.column1, ...photos.column1].map((photo, index) => (
+              <Card
+                key={index}
+                photo={{
+                  alt: `Card Image ${index}`,
+                  ...photo,
+                }}
+              />
+            ))}
+          </motion.div>
+          <motion.div
+            style={{
+              translateY: "-50%",
+            }}
+            animate={{
+              translateY: "0%",
+            }}
+            transition={{
+              duration: DURATION,
+              ease: "linear",
+              repeat: Infinity,
+            }}
+            className="flex flex-col gap-4 pr-4"
+          >
+            {[...photos.column2, ...photos.column2].map((photo, index) => (
+              <Card
+                key={index}
+                photo={{
+                  alt: `Card Image ${index}`,
+                  ...photo,
+                }}
+              />
+            ))}
+          </motion.div>
+        </div>
+      </section>
+    </>
   );
 };
 

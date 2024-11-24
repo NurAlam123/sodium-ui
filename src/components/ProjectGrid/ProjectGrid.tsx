@@ -19,110 +19,10 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const projects = {
-  column1: [
-    {
-      src: project1,
-      alt: "Project 1",
-    },
-    {
-      src: project2,
-      alt: "Project 2",
-    },
-    {
-      src: project3,
-      alt: "Project 3",
-    },
-    {
-      src: project4,
-      alt: "Project 4",
-    },
-    {
-      src: project5,
-      alt: "Project 5",
-    },
-    {
-      src: project11,
-      alt: "Project 11",
-    },
-  ],
-  column2: [
-    {
-      src: project7,
-      alt: "Project 7",
-    },
-    {
-      src: project11,
-      alt: "Project 11",
-    },
-    {
-      src: project8,
-      alt: "Project 8",
-    },
-    {
-      src: project10,
-      alt: "Project 10",
-    },
-    {
-      src: project5,
-      alt: "Project 5",
-    },
-    {
-      src: project6,
-      alt: "Project 6",
-    },
-  ],
-  column3: [
-    {
-      src: project3,
-      alt: "Project 3",
-    },
-    {
-      src: project2,
-      alt: "Project 2",
-    },
-    {
-      src: project9,
-      alt: "Project 9",
-    },
-    {
-      src: project4,
-      alt: "Project 4",
-    },
-    {
-      src: project8,
-      alt: "Project 8",
-    },
-    {
-      src: project1,
-      alt: "Project 1",
-    },
-  ],
-  column4: [
-    {
-      src: project9,
-      alt: "Project 9",
-    },
-    {
-      src: project5,
-      alt: "Project 5",
-    },
-    {
-      src: project7,
-      alt: "Project 7",
-    },
-    {
-      src: project2,
-      alt: "Project 2",
-    },
-    {
-      src: project11,
-      alt: "Project 11",
-    },
-    {
-      src: project10,
-      alt: "Project 10",
-    },
-  ],
+  column1: [project1, project2, project3, project4, project5, project11],
+  column2: [project7, project11, project8, project10, project5, project6],
+  column3: [project3, project2, project9, project4, project8, project1],
+  column4: [project9, project5, project7, project2, project11, project10],
 };
 
 const ProjectGrid = () => {
@@ -145,7 +45,7 @@ const ProjectGrid = () => {
   const skewX = useTransform(scrollYProgress, [0, 1], [-12, 0]);
   const smoothSkewX = useSpring(skewX, {
     mass: 0.8,
-    stiffness: 30,
+    stiffness: 10,
   });
 
   return (
@@ -169,9 +69,9 @@ const ProjectGrid = () => {
             <Image
               key={index}
               src={project.src}
-              width={720}
-              height={720}
-              alt={project.alt}
+              width={project.width}
+              height={project.height}
+              alt={`Column 1, Project ${index}`}
             />
           ))}
         </motion.div>
@@ -185,9 +85,9 @@ const ProjectGrid = () => {
             <Image
               key={index}
               src={project.src}
-              width={720}
-              height={720}
-              alt={project.alt}
+              width={project.width}
+              height={project.height}
+              alt={`Column 2, Project ${index}`}
             />
           ))}
         </motion.div>
@@ -201,9 +101,9 @@ const ProjectGrid = () => {
             <Image
               key={index}
               src={project.src}
-              width={720}
-              height={720}
-              alt={project.alt}
+              width={project.width}
+              height={project.height}
+              alt={`Column 3, Project ${index}`}
             />
           ))}
         </motion.div>
@@ -217,9 +117,9 @@ const ProjectGrid = () => {
             <Image
               key={index}
               src={project.src}
-              width={720}
-              height={720}
-              alt={project.alt}
+              width={project.width}
+              height={project.height}
+              alt={`Column 4, Project ${index}`}
             />
           ))}
         </motion.div>

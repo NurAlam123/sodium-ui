@@ -134,22 +134,24 @@ const ProjectGrid = () => {
 
   const yDown = useTransform(scrollYProgress, [0, 1], [64, -64]);
   const smoothYDown = useSpring(yDown, {
+    stiffness: 20,
     mass: 0.5,
   });
   const yUp = useTransform(scrollYProgress, [0, 1], [-64, 64]);
   const smoothYUp = useSpring(yUp, {
+    stiffness: 20,
     mass: 0.5,
   });
   const skewX = useTransform(scrollYProgress, [0, 1], [-12, 0]);
   const smoothSkewX = useSpring(skewX, {
     mass: 0.8,
-    restDelta: 0.01,
+    stiffness: 30,
   });
 
   return (
     <section
       ref={containerRef}
-      className="flex items-center justify-center lg:m-16 overflow-hidden"
+      className="flex items-center justify-center lg:p-16 overflow-hidden"
     >
       <motion.div
         style={{

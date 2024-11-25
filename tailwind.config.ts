@@ -7,7 +7,12 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "geist-mono": ["--font-geist-mono"],
+        "geist-sans": ["--font-geist-sans"],
+      },
+    },
   },
   plugins: [],
 } satisfies Config;

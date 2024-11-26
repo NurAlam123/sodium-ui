@@ -1,19 +1,19 @@
-import Ableton from "./logos/ableton.svg";
-import Amplitude from "./logos/amplitude.svg";
-import Anthropic from "./logos/anthropic.svg";
-import Arcteryx from "./logos/arcteryx.svg";
-import Brex from "./logos/brex.svg";
-import Cloudflare from "./logos/cloudflare.svg";
-import Figma from "./logos/figma.svg";
-import Liner from "./logos/linear.svg";
-import Lvmh from "./logos/lvmh.svg";
-import Loom from "./logos/loom.svg";
-import Pinecone from "./logos/pinecone.svg";
-import Puma from "./logos/puma.svg";
-import Remarkable from "./logos/remarkable.svg";
-import Shopify from "./logos/shopify.svg";
-import Skims from "./logos/skims.svg";
-import Sonos from "./logos/sonos.svg";
+import Ableton from "./logos/ableton";
+import Amplitude from "./logos/amplitude";
+import Anthropic from "./logos/anthropic";
+import Arcteryx from "./logos/arcteryx";
+import Brex from "./logos/brex";
+import Cloudflare from "./logos/cloudflare";
+import Figma from "./logos/figma";
+import Liner from "./logos/linear";
+import Lvmh from "./logos/lvmh";
+import Loom from "./logos/loom";
+import Pinecone from "./logos/pinecone";
+import Puma from "./logos/puma";
+import Remarkable from "./logos/remarkable";
+import Shopify from "./logos/shopify";
+import Skims from "./logos/skims";
+import Sonos from "./logos/sonos";
 
 export {
   Ableton,

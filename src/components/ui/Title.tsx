@@ -3,7 +3,8 @@
 import clsx from "clsx";
 import { useRef } from "react";
 import { animate, motion } from "framer-motion";
-import { Link as LinkIcon } from "lucide-react";
+import { Copy, Link as LinkIcon } from "lucide-react";
+import toast from "react-hot-toast";
 
 type TitleProps = {
   title: string;
@@ -28,6 +29,9 @@ const Title = ({ title, className }: TitleProps) => {
   const copyToCilpboard = () => {
     const host = window.location.host;
     navigator.clipboard.writeText(`${host}${url}`);
+    toast("Copied!", {
+      icon: <Copy />,
+    });
   };
 
   return (

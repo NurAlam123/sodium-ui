@@ -58,7 +58,7 @@ const Title = ({ title, className }: TitleProps) => {
     >
       <motion.span
         ref={ref}
-        className="absolute left-0 translate-x-5 hidden cursor-pointer"
+        className="md:absolute md:left-0 md:translate-x-5 md:hidden cursor-pointer"
         onClick={copyToCilpboard}
       >
         <LinkIcon />

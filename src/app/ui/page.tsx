@@ -1,5 +1,6 @@
 import { ArrowDown } from "@/assets/others";
 import CardTicker from "@/components/Cards/CardTicker";
+import CarouselCard from "@/components/Carousel/CarouselCard";
 import LogoTickerSanity from "@/components/LogoTicker/LogoTickerSanity";
 import ProjectGrid from "@/components/ProjectGrid/ProjectGrid";
 
@@ -15,6 +16,7 @@ export default function Page() {
       <LogoTickerSanity />
       <ProjectGrid />
       <CardTicker />
+      <CarouselCard />
     </section>
   );
 }

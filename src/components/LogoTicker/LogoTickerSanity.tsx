@@ -73,7 +73,7 @@ const LogoTickerSanity = () => {
     <>
       <Title title="Logo_Ticker" />
       <section
-        className="h-svh md:h-[150vh] flex justify-center"
+        className="h-svh md:h-[150vh] flex justify-center overflow-hidden"
         ref={containerRef}
       >
         <div className="flex flex-col md:grid md:grid-cols-2 justify-center items-center gap-8 overflow-hidden md:overflow-visible">

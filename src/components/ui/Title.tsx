@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { animate, motion } from "framer-motion";
 import { Copy, Link as LinkIcon } from "lucide-react";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 type TitleProps = {
   title: string;
@@ -12,7 +13,7 @@ type TitleProps = {
 };
 
 const Title = ({ title, className }: TitleProps) => {
-  const url = `/ui#${title}`;
+  const url = `/ui/${title}`;
 
   const ref = useRef<HTMLSpanElement>(null);
 
@@ -36,7 +37,6 @@ const Title = ({ title, className }: TitleProps) => {
 
   return (
     <motion.h1
-      id={title}
       onHoverStart={showIcon}
       onHoverEnd={hideIcon}
       className={clsx(
@@ -56,14 +56,14 @@ const Title = ({ title, className }: TitleProps) => {
         paddingLeft: 56,
       }}
     >
-      <motion.span
+      <span
         ref={ref}
         className="md:absolute md:left-0 md:translate-x-5 md:hidden cursor-pointer"
         onClick={copyToCilpboard}
       >
         <LinkIcon />
-      </motion.span>
-      &lt; {title} /&gt;
+      </span>
+      <Link href={`/ui/${title}`}>&lt; {title} /&gt;</Link>
     </motion.h1>
   );
 };

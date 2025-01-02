@@ -6,7 +6,7 @@ export default function UILayout({
   return (
     <>
       <SideBar />
-      <main className="ml-60">{children}</main>
+      <main className="ml-64 p-12">{children}</main>
     </>
   );
 }

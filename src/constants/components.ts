@@ -1,5 +1,6 @@
 import CardTicker from "@/components/Cards/CardTicker";
 import CarouselCard from "@/components/Carousel/CarouselCard";
+import LogoCarousel from "@/components/Carousel/LogoCarousel";
 import LogoTickerSanity from "@/components/LogoTicker/LogoTickerSanity";
 import ProjectGrid from "@/components/ProjectGrid/ProjectGrid";
 
@@ -35,6 +36,11 @@ const components: ComponentType[] = [
     id: "Image_Card_Ticker",
     component: CardTicker,
     category: Category.Ticker,
+  },
+  {
+    id: "Logo_Carousel",
+    component: LogoCarousel,
+    category: Category.Carousel,
   },
 ];
 export default components;

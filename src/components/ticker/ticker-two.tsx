@@ -13,7 +13,7 @@ import {
 import Image, { ImageProps } from "next/image";
 
 import { motion } from "framer-motion";
-import Title from "../ui/Title";
+import Chip from "../ui/Chip";
 
 const photos = {
   column1: [
@@ -39,7 +39,7 @@ const TickerTwo = () => {
 
   return (
     <>
-      <Title title="Image_Card_Ticker" />
+      <Chip cid="2" />
       <section className="my-20 mx-4 md:mx-10 overflow-hidden h-dvh [mask-image:linear-gradient(to_bottom,transparent,black_5%,black_95%,transparent)]">
         <div className="flex justify-center items-center">
           <motion.div

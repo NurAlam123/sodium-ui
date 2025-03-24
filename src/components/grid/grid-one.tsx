@@ -17,7 +17,7 @@ import {
 import Image from "next/image";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Title from "../ui/Title";
+import Chip from "../ui/Chip";
 
 const projects = {
   column1: [project1, project2, project3, project4, project5, project11],
@@ -51,7 +51,7 @@ const GridOne = () => {
 
   return (
     <>
-      <Title title="Project_Grid" />
+      <Chip cid="1" />
       <section
         ref={containerRef}
         className="flex items-center justify-center lg:p-16 overflow-hidden"

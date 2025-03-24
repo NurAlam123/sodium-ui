@@ -1,10 +1,10 @@
 "use client";
 
 import * as logo from "@/assets/language-logos";
-import Title from "../ui/Title";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import clsx from "clsx";
+import Chip from "../ui/Chip";
 
 const LOGOS = [
   logo.Cpp,
@@ -34,7 +34,7 @@ const CarouselOne = () => {
 
   return (
     <div>
-      <Title title="Logo_Carousel" />
+      <Chip cid="1" />
       <div className="h-screen relative size-full rounded-lg">
         <div className="absolute h-1/2 w-full bottom-8 bg-white z-10" />
         <div className="size-[40rem] relative left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-full border-2">

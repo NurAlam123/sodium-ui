@@ -1,16 +1,17 @@
-import CarouselOne from "@/components/Carousel/carousel-one";
-import CarouselTwo from "@/components/Carousel/carousel-two";
+import CarouselOne from "@/components/carousel/carousel-one";
+import CarouselTwo from "@/components/carousel/carousel-two";
+import Box from "@/components/ui/Box";
 
 export default function CarouselPage() {
   return (
     <main>
-      <div className="relative h-svh overflow-hidden">
+      <Box>
         <CarouselOne />
-      </div>
+      </Box>
 
-      <div className="relative h-svh overflow-hidden">
+      <Box>
         <CarouselTwo />
-      </div>
+      </Box>
     </main>
   );
 }

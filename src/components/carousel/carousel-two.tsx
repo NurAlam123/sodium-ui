@@ -8,7 +8,6 @@ import {
   malePerson2,
 } from "@/assets/card_image";
 import { StaticImageData } from "next/image";
-import Title from "../ui/Title";
 
 import {
   motion,
@@ -19,6 +18,7 @@ import {
 } from "framer-motion";
 import { useState } from "react";
 import WIP from "../ui/WIP";
+import Chip from "../ui/Chip";
 
 const images = [
   femalePerson1,
@@ -65,7 +65,7 @@ const CarouselTwo = () => {
 
   return (
     <>
-      <Title title="Image_Carousel_Card" />
+      <Chip cid="2" />
       <WIP />
       <section className="m-4 relative justify-center items-center border-2 rounded-lg flex h-screen md:mx-8 gap-4 overflow-hidden snap-y snap-mandatory *:snap-center *:place-items-center">
         {images.map((image, index) => (

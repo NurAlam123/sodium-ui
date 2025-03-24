@@ -1,3 +1,12 @@
+import GridOne from "@/components/grid/grid-one";
+import Box from "@/components/ui/Box";
+
 export default function GridPage() {
-  return <div>GridPage</div>;
+  return (
+    <main>
+      <Box>
+        <GridOne />
+      </Box>
+    </main>
+  );
 }

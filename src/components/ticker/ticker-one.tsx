@@ -11,7 +11,7 @@ import {
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import Title from "../ui/Title";
+import Chip from "../ui/Chip";
 
 const DURATION = 20;
 
@@ -24,7 +24,7 @@ const TickerOne = () => {
 
   return (
     <>
-      <Title title="Logo_Ticker" />
+      <Chip cid="1" />
       <section
         className="h-svh md:h-[150vh] flex justify-center overflow-hidden"
         ref={containerRef}

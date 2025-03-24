@@ -15,7 +15,7 @@ import Title from "../ui/Title";
 
 const DURATION = 20;
 
-const LogoTickerSanity = () => {
+const TickerOne = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -216,4 +216,4 @@ const SecondRow: React.FC<RowProps> = ({ isDesktop, opacity, rtl, ltr }) => {
   );
 };
 
-export default LogoTickerSanity;
+export default TickerOne;

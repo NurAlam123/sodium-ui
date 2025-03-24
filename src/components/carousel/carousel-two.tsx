@@ -36,7 +36,7 @@ type CardPropsType = {
   src: StaticImageData;
 };
 
-const CarouselCard = () => {
+const CarouselTwo = () => {
   const progress = useMotionValue(0);
   const progressStep = useTransform(progress, (latest) => Math.floor(latest));
   const [direction, setDirection] = useState(1);
@@ -168,4 +168,4 @@ const Card = ({ index, src, direction, progress }: CardPropsType) => {
     </motion.div>
   );
 };
-export default CarouselCard;
+export default CarouselTwo;

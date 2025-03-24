@@ -26,7 +26,7 @@ const projects = {
   column4: [project9, project5, project7, project2, project11, project10],
 };
 
-const ProjectGrid = () => {
+const GridOne = () => {
   const containerRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -132,4 +132,4 @@ const ProjectGrid = () => {
   );
 };
 
-export default ProjectGrid;
+export default GridOne;

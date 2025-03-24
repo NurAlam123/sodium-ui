@@ -34,7 +34,7 @@ const photos = {
   ],
 };
 
-const CardTicker = () => {
+const TickerTwo = () => {
   const DURATION = 20;
 
   return (
@@ -110,4 +110,4 @@ const Card = ({ photo }: { photo: ImageProps }) => {
   );
 };
 
-export default CardTicker;
+export default TickerTwo;

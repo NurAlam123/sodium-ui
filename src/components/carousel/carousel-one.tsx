@@ -15,7 +15,7 @@ const LOGOS = [
   logo.Rust,
 ];
 
-const LogoCarousel = () => {
+const CarouselOne = () => {
   const [current, setCurrent] = useState(1);
 
   const maxItem = LOGOS.length;
@@ -88,4 +88,4 @@ const LogoCarousel = () => {
   );
 };
 
-export default LogoCarousel;
+export default CarouselOne;

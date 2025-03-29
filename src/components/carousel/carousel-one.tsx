@@ -35,9 +35,9 @@ const CarouselOne = () => {
   return (
     <div>
       <Chip cid="1" />
-      <div className="h-screen relative size-full rounded-lg">
-        <div className="absolute h-1/2 w-full bottom-8 bg-white z-10" />
-        <div className="size-[40rem] relative left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 rounded-full border-2">
+      <div className="h-screen relative size-[40rem] -translate-x-1/2 left-1/2 rounded-lg flex justify-center items-center md:block top-[120px]">
+        <div className="absolute h-1/2 w-[60rem] -translate-x-1/2 left-1/2 bottom-0 md:bottom-8 bg-white z-10" />
+        <div className="size-[34rem] md:size-[40rem] relative md:left-1/2 md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/2 rounded-full border-2">
           {LOGOS.map((Item, i) => (
             <div
               key={i}
@@ -49,7 +49,7 @@ const CarouselOne = () => {
               }}
             >
               <div
-                className="relative size-[9rem] -top-[2.3rem] p-4 -translate-x-1/2 bg-white ml-[2.3rem] border rounded-lg"
+                className="relative size-[5rem] md:size-[9rem] -top-0 md:-top-[2.3rem] p-4 -translate-x-1/2 bg-white ml-[2.3rem] border rounded-lg"
                 style={{
                   rotate: `-${angle * i + angle * (current - 1)}deg`,
                   transition: "rotate 1s ease-out",

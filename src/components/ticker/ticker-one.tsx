@@ -26,10 +26,10 @@ const TickerOne = () => {
     <>
       <Chip cid="1" />
       <section
-        className="h-svh md:h-[150vh] flex justify-center overflow-hidden"
+        className="h-svh md:h-[150vh] md:flex justify-center items-center overflow-hidden px-2"
         ref={containerRef}
       >
-        <div className="flex flex-col md:grid md:grid-cols-2 justify-center items-center gap-8 overflow-hidden md:overflow-visible">
+        <div className="h-full md:grid md:grid-cols-2 justify-center items-center flex flex-col gap-8">
           <Rows scrollYProgress={scrollYProgress} />
         </div>
       </section>
@@ -64,7 +64,7 @@ const Rows: React.FC<{ scrollYProgress: MotionValue }> = ({
 
 const Row: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="flex gap-8 md:grid md:grid-rows-2 md:gap-10 items-center justify-start *:items-center w-full">
+    <div className="gap-8 md:grid md:grid-rows-2 md:gap-10 md:items-center md:justify-start *:items-center w-full">
       {children}
     </div>
   );
@@ -132,14 +132,14 @@ const FirstRow: React.FC<RowProps> = ({ isDesktop, ltr, opacity, rtl }) => {
         <motion.div
           variants={mobileAnimationLTR}
           animate="scroll"
-          className="flex gap-8 pr-8"
+          className="flex w-fit"
           style={{
             opacity: 1,
             translateX: "-50%",
           }}
         >
-          {Array(2).map((i) => (
-            <span key={i}>
+          {[1, 2].map((i) => (
+            <span key={i} className="flex gap-8 items-end pr-8">
               <logo.Ableton />
               <logo.Figma />
               <logo.Cloudflare />
@@ -191,14 +191,14 @@ const SecondRow: React.FC<RowProps> = ({ isDesktop, opacity, rtl, ltr }) => {
           <motion.div
             variants={mobileAnimationRTL}
             animate="scroll"
-            className="flex gap-8 pr-8"
+            className="flex w-fit"
             style={{
               translateX: "0%",
               opacity: 1,
             }}
           >
-            {Array(2).map((i) => (
-              <span key={i}>
+            {[1, 2].map((i) => (
+              <span key={i} className="flex gap-8 pl-8 items-end">
                 <logo.Amplitude />
                 <logo.Anthropic />
                 <logo.Brex />
